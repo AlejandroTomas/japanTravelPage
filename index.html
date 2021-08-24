@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Travel</title>
+    <link rel="stylesheet" href="./style/style-home.css">
+
+    <!-- font-icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- glider.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <!-- script -->
+    <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+    <div class="container-page">
+        <div class="header-slide">
+            <div class="menu">
+                <div class="logo">
+                    <span class="fas fa-mountain"></span>
+                </div>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="#">Hometales of Japan</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Experience</a></li>
+                    </ul>
+                    <label>
+                        <input type="search" placeholder="SEARCH...">
+                        <span class="fas fa-search"></span>
+                    </label>
+                </nav>
+                <div class="wrapper-btn-explore">
+                    <div class="social-btns">
+                        <span class="fab fa-twitter"></span>
+                        <span class="fab fa-facebook-f"></span>
+                        <span class="fab fa-instagram"></span>
+                        <span class="fas fa-tram"></span>
+                    </div>
+                    <button>Explore</button>
+                </div>
+            </div>
+
+            <div class="logo-japan-center">
+                <p id="japanTxt">日本国</p>
+                <h1 id="titleTxt">JAPAN</h1>
+            </div>
+
+            <div class="select-city-menu">
+                <div class="wraaper-city-select">
+
+                    <div class="item-city" id="item-Tokyo">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Tokyo">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET INTO THE FUTURE IN</span>
+                            <h2>Tokyo</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Kyoto">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Kyoto">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>TURN BACK THE TIME IN</span>
+                            <h2>Kyoto</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Osaka">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Osaka">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET IMPRESSED BY</span>
+                            <h2>Osaka</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Nara">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Nara">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>MAKE FRIENDS WITH NATURE IN</span>
+                            <h2>Nara</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="content-page">
+            <div class="wrapper-tales">
+                <div class="tales__img-wrapper">
+                    <img loading="lazy" src="./images/ryujin-onsen_55baab62_1331x2000.jpg" alt="">
+                </div>
+                <div class="tales__text">
+                    <span class="red-txt">日本の物語</span>
+                    <h2>Tales of Japan</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem modi nulla tempore commodi. Praesentium commodi placeat molestiae alias vero quidem sed corporis sunt, eligendi dicta quos tempora, reiciendis ex amet.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem modi nulla tempore commodi. Praesentium commodi placeat molestiae alias vero quidem sed corporis sunt, eligendi dicta quos tempora, reiciendis ex amet.
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <ul>
+                        <li id="tales__click__Tokyo" class="test">Tokyo</li>
+                        <li id="tales__click__Kyoto" class="test">Kyoto</li>
+                        <li id="tales__click__Osaka" class="test">Osaka</li>
+                        <li id="tales__click__Nara"  class="test">Nara</li>
+                    </ul>
+                    <button>ABOUT US</button>
+                </div>
+                <div id="tales__info">
+                    <span>ABOUT</span>
+                    <div id="line-measurer"></div>
+                </div>
+            </div>
+
+            <div class="wrapper-content">
+                <span class="red-txt">日本を発見する</span>
+                <h2>Discover Japan</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus saepe rerum odit facilis hic omnis neque vitae repellat dolores laboriosam, quaerat nostrum, optio architecto culpa, dicta qui inventore asperiores recusandae!</p>
+                
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+
+                        <button aria-label="Anterior"  class="carousel__anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+
+                        <div class="carousel__lista">
+
+                            <div class="carousel__elemento">
+                                <img loading="lazy" src="./images/Nara.png" alt="">
+                                <div class="carousel__text-image">
+                                    <span>Palacio de emperador</span>
+                                    <h2>Tokyo</h2>
+                                    <button>view information</button>
+                                </div>
+                            </div>
+
+                            <div class="carousel__elemento">
+                                <img loading="lazy" loading="lazy" src="./images/Osaka-Portada.jpg" alt="">
+                                <div class="carousel__text-image">
+                                    <span>La ciudad nocturna</span>
+                                    <h2>Osaka</h2>
+                                    <button>view information</button>
+                                </div>
+                            </div>
+
+                            <div class="carousel__elemento">
+                                <img loading="lazy" src="./images/food-Japan.jpg" alt="">
+                                <div class="carousel__text-image">
+                                    <span>Los barrios clasicos</span>
+                                    <h2>Kyoto</h2>
+                                    <button>view information</button>
+                                </div>
+                            </div>
+
+                            <div class="carousel__elemento">
+                                <img loading="lazy" src="./images/fukuoka.jpg" alt="">
+                                <div class="carousel__text-image">
+                                    <span>Tradicion y cultura</span>
+                                    <h2>Nara</h2>
+                                    <button>view information</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button aria-label="Siguiente" class="carousel__siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div role="tablist" class="carousel__indicadores"></div>
+                </div>
+                <div class="sub-wrapper-button">
+                    <button>Find more here</button>
+                </div>
+
+            </div>
+
+            <div class="info-holoday">
+                <section class="text-left-descriptive">
+                    <div class="part-txt-top">
+                        <span class="red-txt">京都の休日</span>
+                        <h2>Holiday in KYOTO</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laborum iste, omnis totam temporibus exercitationem dolorem illum animi magni eligendi, possimus obcaecati est cupiditate. Perferendis quae id ea accusamus sunt.
+                        </p>
+                        <button>more</button>
+                    </div>
+                    <div class="image-resourt">
+                        <img loading="lazy" src="./images/fukuoka.jpg" alt="">
+                    </div>
+                    <div class="stick"></div>
+                </section>
+                <section class="prev-video-image">
+                    <div class="right-top">
+                        <button><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="right-bottom">
+                        <a href="#">view gallery <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="wrapper-to-blog">
+                <div class="title-to-blog">
+                    <span class="red-txt">私たちの旅行ブログ</span>
+                    <h2>Our Travel Blog</h2>
+                </div>
+                <div class="item-theme-blog" id="post-1">
+                    <div class="to-blog__img">
+                        <img loading="lazy" src="./images/blog-1.jpg" alt="">
+                    </div>
+                    <h4>ikiburo castle in Fukuoka</h4>
+                    <span>Tokyo</span>
+                    <button>view post</button>
+                </div>
+
+                <div class="item-theme-blog" id="post-2">
+                    <div class="to-blog__img">
+                        <img loading="lazy" src="./images//blog-2.jpg" alt="">
+                    </div>
+                    <h4>ikiburo castle in Fukuoka</h4>
+                    <span>Tokyo</span>
+                    <button>view post</button>
+                </div>
+
+                <div class="item-theme-blog" id="post-3">
+                    <div class="to-blog__img">
+                        <img loading="lazy" src="./images/blog-3.jpg" alt="">
+                    </div>
+                    <h4>ikiburo castle in Fukuoka</h4>
+                    <span>Tokyo</span>
+                    <button>view post</button>
+                </div>
+
+                <div class="item-theme-blog" id="post-4">
+                    <div class="to-blog__img">
+                        <img loading="lazy" src="./images/blog-4.jpg" alt="">
+                    </div>
+                    <h4>ikiburo castle in Fukuoka</h4>
+                    <span>Tokyo</span>
+                    <button>view post</button>
+                </div>
+
+                <div class="item-theme-blog" id="post-5">
+                    <div class="to-blog__img">
+                        <img loading="lazy" src="./images/blog-5.jpg" alt="">
+                    </div>
+                    <h4>ikiburo castle in Fukuoka</h4>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Error exercitationem non fugiat temporibus facere id similique. 
+                        Quae aperiam fugiat, dignissimos neque eaque
+                    </span>
+                    <button>view post</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="list-to__go">
+                <div class="sub-menu">
+                    <h5>Enlaces útiles</h5>
+                    <ul>
+                        <li><a href="#">Visitantes noveles</a></li>
+                        <li><a href="#">Wifi gratuito en japón <span class="fas fa-external-link-alt"></span></a></li>
+                        <li><a href="#">Buscar hoteles y ryokan <span class="fas fa-external-link-alt"></span></a></li>
+                        <li><a href="#">El tiempo en japon <span class="fas fa-external-link-alt"></span></a></li>
+                        <li><a href="#">Recorridos y actividades en Japón <span class="fas fa-external-link-alt"></span></a></li>
+                        <li><a href="#">PREGUNTAS FRECUENTES <span class="fas fa-external-link-alt"></span></a></li>
+                    </ul>
+                </div>
+                <div class="sub-menu">
+                    <h5>Sitios relacionados con JNTO</h5>
+                    <ul>
+                        <li><a href="#">Agencia de convenciones de Japón<span class="fas fa-external-link-alt"></span></a></li>
+                        <li><a href="#">JNTO para los Medios JOMC<span class="fas fa-external-link-alt"></span></a></li>
+                    </ul>
+                </div>
+                <div class="sub-menu">
+                    <h5>Acerca de JNTO</h5>
+                    <ul>
+                        <li> <a href="#">Quienes somos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="mark-social-media">
+                <div class="footer-logo"><span class="fas fa-mountain"></span></div>
+                <ol>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Politica de cookies</a></li>
+                    <li><a href="#">Condiciones de uso</a></li>
+                    <li><a href="#">Enlaces</a></li>
+                </ol>
+                <ul>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    <li><a href="#"><span class="fas fa-tram"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="select-language"></div>
+    </footer>
+    </div>
+</body>
+</html>
