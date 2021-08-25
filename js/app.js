@@ -1,11 +1,21 @@
 import lazyLoading from "./lazyLoad.js";
+import renderScreen from "./renderMediaQuery.js";
 
 
 window.addEventListener('load',() =>{
+    //Evento rezsize momentaneo
+    window.addEventListener('resize',()=>{
+        console.log(screen.width)
+        renderScreen(screen.width,document.getElementById('nav-menu'),'menu');
+        //renderScreen(screen.width,document.querySelector('.select-city-menu'),'selectBackgrund');
+    })
+    renderScreen(screen.width,document.getElementById('nav-menu'),'menu');
+    //renderScreen(screen.width,document.querySelector('.select-city-menu'),'selectBackgrund');
+    //Carga lenta de las imagenes
     lazyLoading(document.querySelectorAll('.img'))
 
     //variables para cambiar background
-    const [...backgroundSelect]=document.querySelectorAll('.container-img');
+    const [...backgroundSelect]=document.querySelectorAll('.clickeable-div');
     const handleBackground= document.querySelector('.header-slide');
     const handleJapaneText=document.getElementById('japanTxt');
     const handleTitleText=document.getElementById('titleTxt');
@@ -58,33 +68,71 @@ window.addEventListener('load',() =>{
         }
     }
 
+    function disableScroll(){  
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function(){ window.scrollTo(x, y) };
+    }
+    function enableScroll(){  
+        window.onscroll = null;
+    }
+    function closeMenuSelect(menu){
+        menu.style.transform="translateX(100%)"
+    }
     //Captura cualquier evento que haga click
     document.addEventListener('click',(e)=>{
         //*************Evento cambio de fondo*************//
         //Tokyo
         if(e.target===backgroundSelect[0]){
-           changeBackground(0)
+           changeBackground(0);
+           console.log('click')
+           closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //kyoto
         if(e.target===backgroundSelect[1]){
-            changeBackground(1)
+            changeBackground(1);
+            console.log('click')
+            closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //Osaka
         if(e.target===backgroundSelect[2]){
-            changeBackground(2)
+            changeBackground(2);
+            console.log('click')
+            closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //Nara
         if(e.target===backgroundSelect[3]){
-            changeBackground(3)
+            changeBackground(3);
+            console.log('click')
+            closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //*************Animacio de ABOUT_TALES*************//
         if(e.target.matches('.test')){
             changeMeasure(e.target.id)
         }
+
+        if(e.target.matches('#menuQuery')){
+            document.querySelector('.menu-absolute').style.transform="translateX(0rem)"
+            disableScroll()
+        }
+       if(e.target.matches('#close')){
+            document.querySelector('.menu-absolute').style.transform="translateX(-60rem)"
+            enableScroll()
+        } 
+        if(e.target.matches('.menu-absolute')){
+            document.querySelector('.menu-absolute').style.transform="translateX(-60rem)"
+            enableScroll()
+        }
+
+        //Abrir menuBackgroundImg 768px>>>>
+        if(e.target.matches('.tab')){
+            document.querySelector('.select-city-menu').style.transform="translateX(0%)"
+        }
+        console.log(e.target)
     });
-    
+
 })

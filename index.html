@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japan Travel</title>
     <link rel="stylesheet" href="./style/style-home.css">
-
+    <link rel="stylesheet" href="./hamburgers-master/dist/hamburgers.min.css">
     <!-- font-icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -18,21 +18,13 @@
 </head>
 <body>
     <div class="container-page">
+        <!-- header -->
         <div class="header-slide">
             <div class="menu">
                 <div class="logo">
                     <span class="fas fa-mountain"></span>
                 </div>
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="#">Hometales of Japan</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Experience</a></li>
-                    </ul>
-                    <label>
-                        <input type="search" placeholder="SEARCH...">
-                        <span class="fas fa-search"></span>
-                    </label>
+                <nav id="nav-menu"> 
                 </nav>
                 <div class="wrapper-btn-explore">
                     <div class="social-btns">
@@ -63,6 +55,7 @@
                             <span>GET INTO THE FUTURE IN</span>
                             <h2>Tokyo</h2>
                         </div>
+                        <div class="clickeable-div"></div>
                     </div>
                     
                     <div class="item-city" id="item-Kyoto">
@@ -75,6 +68,7 @@
                             <span>TURN BACK THE TIME IN</span>
                             <h2>Kyoto</h2>
                         </div>
+                        <div class="clickeable-div"></div>
                     </div>
                     
                     <div class="item-city" id="item-Osaka">
@@ -87,6 +81,7 @@
                             <span>GET IMPRESSED BY</span>
                             <h2>Osaka</h2>
                         </div>
+                        <div class="clickeable-div"></div>
                     </div>
                     
                     <div class="item-city" id="item-Nara">
@@ -99,16 +94,20 @@
                             <span>MAKE FRIENDS WITH NATURE IN</span>
                             <h2>Nara</h2>
                         </div>
+                        <div class="clickeable-div"></div>
                     </div>
-                    
-                </div>
+                    <div class="tab">
+                        select city
+                    </div>
+                    </div> 
             </div>
         </div>
 
+        <!-- content of page -->
         <div class="content-page">
             <div class="wrapper-tales">
                 <div class="tales__img-wrapper">
-                    <img loading="lazy" src="./images/ryujin-onsen_55baab62_1331x2000.jpg" alt="">
+                    <img class="img" data-src="./images/ryujin-onsen_55baab62_1331x2000.jpg" alt="">
                 </div>
                 <div class="tales__text">
                     <span class="red-txt">日本の物語</span>
@@ -148,7 +147,7 @@
                         <div class="carousel__lista">
 
                             <div class="carousel__elemento">
-                                <img loading="lazy" src="./images/Nara.png" alt="">
+                                <img class="img" data-src="./images/Nara.png" alt="">
                                 <div class="carousel__text-image">
                                     <span>Palacio de emperador</span>
                                     <h2>Tokyo</h2>
@@ -157,7 +156,7 @@
                             </div>
 
                             <div class="carousel__elemento">
-                                <img loading="lazy" loading="lazy" src="./images/Osaka-Portada.jpg" alt="">
+                                <img class="img" data-src="./images/Osaka-Portada.jpg" alt="">
                                 <div class="carousel__text-image">
                                     <span>La ciudad nocturna</span>
                                     <h2>Osaka</h2>
@@ -166,7 +165,7 @@
                             </div>
 
                             <div class="carousel__elemento">
-                                <img loading="lazy" src="./images/food-Japan.jpg" alt="">
+                                <img class="img" data-src="./images/food-Japan.jpg" alt="">
                                 <div class="carousel__text-image">
                                     <span>Los barrios clasicos</span>
                                     <h2>Kyoto</h2>
@@ -175,7 +174,7 @@
                             </div>
 
                             <div class="carousel__elemento">
-                                <img loading="lazy" src="./images/fukuoka.jpg" alt="">
+                                <img class="img" data-src="./images/fukuoka.jpg" alt="">
                                 <div class="carousel__text-image">
                                     <span>Tradicion y cultura</span>
                                     <h2>Nara</h2>
@@ -209,7 +208,7 @@
                         <button>more</button>
                     </div>
                     <div class="image-resourt">
-                        <img loading="lazy" src="./images/fukuoka.jpg" alt="">
+                        <img class="img" data-src="./images/fukuoka.jpg" alt="">
                     </div>
                     <div class="stick"></div>
                 </section>
@@ -230,7 +229,7 @@
                 </div>
                 <div class="item-theme-blog" id="post-1">
                     <div class="to-blog__img">
-                        <img loading="lazy" src="./images/blog-1.jpg" alt="">
+                        <img class="img" data-src="./images/blog-1.jpg" alt="">
                     </div>
                     <h4>ikiburo castle in Fukuoka</h4>
                     <span>Tokyo</span>
@@ -239,7 +238,7 @@
 
                 <div class="item-theme-blog" id="post-2">
                     <div class="to-blog__img">
-                        <img loading="lazy" src="./images//blog-2.jpg" alt="">
+                        <img class="img" data-src="./images//blog-2.jpg" alt="">
                     </div>
                     <h4>ikiburo castle in Fukuoka</h4>
                     <span>Tokyo</span>
@@ -248,7 +247,7 @@
 
                 <div class="item-theme-blog" id="post-3">
                     <div class="to-blog__img">
-                        <img loading="lazy" src="./images/blog-3.jpg" alt="">
+                        <img class="img" data-src="./images/blog-3.jpg" alt="">
                     </div>
                     <h4>ikiburo castle in Fukuoka</h4>
                     <span>Tokyo</span>
@@ -257,7 +256,7 @@
 
                 <div class="item-theme-blog" id="post-4">
                     <div class="to-blog__img">
-                        <img loading="lazy" src="./images/blog-4.jpg" alt="">
+                        <img class="img" data-src="./images/blog-4.jpg" alt="">
                     </div>
                     <h4>ikiburo castle in Fukuoka</h4>
                     <span>Tokyo</span>
@@ -266,7 +265,7 @@
 
                 <div class="item-theme-blog" id="post-5">
                     <div class="to-blog__img">
-                        <img loading="lazy" src="./images/blog-5.jpg" alt="">
+                        <img class="img" data-src="./images/blog-5.jpg" alt="">
                     </div>
                     <h4>ikiburo castle in Fukuoka</h4>
                     <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -278,6 +277,7 @@
             </div>
         </div>
 
+        <!-- footer -->
         <footer class="footer">
             <div class="list-to__go">
                 <div class="sub-menu">
@@ -326,7 +326,7 @@
             </div>
 
             <div class="select-language"></div>
-    </footer>
+        </footer>
     </div>
 </body>
 </html>

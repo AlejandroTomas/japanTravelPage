@@ -65,6 +65,8 @@ body::-webkit-scrollbar-track {
 .container-page {
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .header-slide {
@@ -109,8 +111,10 @@ body::-webkit-scrollbar-track {
   width: 65%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
 }
-.header-slide .menu #nav-menu ul {
+.header-slide .menu #nav-menu > ul {
   width: 55%;
   display: flex;
   justify-content: space-around;
@@ -118,7 +122,7 @@ body::-webkit-scrollbar-track {
   list-style: none;
   padding: 0 1%;
 }
-.header-slide .menu #nav-menu ul li {
+.header-slide .menu #nav-menu > ul li {
   width: auto;
   padding: 0 15px;
   height: 45%;
@@ -126,7 +130,7 @@ body::-webkit-scrollbar-track {
   justify-content: space-around;
   align-items: center;
 }
-.header-slide .menu #nav-menu ul li a {
+.header-slide .menu #nav-menu > ul li a {
   letter-spacing: 0px;
   text-align: center;
   font-size: 0.74rem;
@@ -135,12 +139,13 @@ body::-webkit-scrollbar-track {
   text-transform: uppercase;
   font-weight: bold;
 }
-.header-slide .menu #nav-menu ul li:hover {
+.header-slide .menu #nav-menu > ul li:hover {
   background-color: #f1022e;
   border-radius: 50px;
 }
 .header-slide .menu #nav-menu label {
-  width: 30%;
+  width: 15rem;
+  height: 100%;
   display: flex;
   align-items: center;
   position: relative;
@@ -165,6 +170,90 @@ body::-webkit-scrollbar-track {
   color: white;
   position: absolute;
   right: 10%;
+}
+.header-slide .menu #nav-menu .hamburguer__container {
+  width: auto;
+  margin: 0 10% 0 10%;
+}
+.header-slide .menu #nav-menu .hamburguer__container i {
+  font-size: 2rem;
+  color: white;
+}
+.header-slide .menu #nav-menu .hamburguer__container i:hover {
+  color: #f1022e;
+}
+.header-slide .menu #nav-menu .menu-absolute {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  z-index: 9;
+  left: 0%;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(-60rem);
+  transition: all 400ms;
+  background-color: transparent;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto {
+  position: relative;
+  display: flex;
+  width: 50%;
+  padding: 2rem 1rem;
+  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto h2 {
+  width: 100%;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto h2 a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto ul {
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto ul li {
+  width: 50%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto ul li i {
+  font-size: 1.2rem;
+  color: red;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto .social {
+  width: 30%;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  align-content: flex-end;
+  color: black;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto .social span {
+  font-size: 1.2rem;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto .close-menu {
+  position: absolute;
+  right: 10%;
+}
+.header-slide .menu #nav-menu .menu-absolute .wrapper-menu-absoluto .close-menu i {
+  font-size: 2rem;
+  color: red;
 }
 .header-slide .menu .wrapper-btn-explore {
   height: 100%;
@@ -255,6 +344,7 @@ body::-webkit-scrollbar-track {
   justify-content: space-between;
   align-items: center;
   color: white;
+  position: relative;
 }
 .header-slide .select-city-menu .wraaper-city-select .item-city .item-left {
   width: 90px;
@@ -300,6 +390,26 @@ body::-webkit-scrollbar-track {
 .header-slide .select-city-menu .wraaper-city-select .item-city .item-right h2 {
   width: 100%;
   font-size: 1.5rem;
+}
+.header-slide .select-city-menu .wraaper-city-select .item-city .clickeable-div {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header-slide .select-city-menu .wraaper-city-select .tab {
+  color: black;
+  position: absolute;
+  transform: rotateZ(270deg);
+  background-color: white;
+  padding: 1rem 2rem;
+  left: -33%;
+  bottom: 10%;
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .header-slide .select-city-menu .wraaper-city-select #item-Tokyo .item-left #select-Tokyo {
   background-image: url("../images/Tokyo-Portada.jpeg");
@@ -442,7 +552,6 @@ body::-webkit-scrollbar-track {
   width: 80%;
   height: auto;
   display: flex;
-  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -949,22 +1058,60 @@ body::-webkit-scrollbar-track {
   .header-slide .menu #nav-menu ul {
     width: 70%;
   }
+  .header-slide .menu #nav-menu label {
+    width: 20rem;
+  }
   .header-slide .menu .wrapper-btn-explore {
     padding-right: 1%;
+    display: flex;
+    justify-content: center;
+  }
+  .header-slide .menu .wrapper-btn-explore .social-btns {
+    display: none;
+  }
+  .header-slide .menu .wrapper-btn-explore button {
+    width: 10rem;
+  }
+  .header-slide .logo-japan-center {
+    grid-column: 1/9;
+    grid-row: 3/14;
   }
   .header-slide .logo-japan-center p {
     font-size: 2rem;
   }
   .header-slide .logo-japan-center h1 {
-    font-size: 9rem;
+    font-size: 12rem;
+  }
+  .header-slide .select-city-menu {
+    position: absolute;
+    border: white solid;
+    width: 20rem;
+    height: 100vh;
+    right: 0;
+    z-index: 9;
+    background: linear-gradient(360deg, black 0%, rgba(0, 0, 0, 0.4878326331) 0%, rgba(255, 255, 255, 0) 0%);
+    background-color: white;
+    border-radius: 20px 0 0 20px;
+    transition: all 500ms;
+    transform: translateX(100%);
   }
   .header-slide .select-city-menu .wraaper-city-select {
     width: 100%;
-    padding-left: 2%;
+    height: 100%;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
   }
   .header-slide .select-city-menu .wraaper-city-select .item-city {
     margin-left: 5px;
   }
+  .header-slide .select-city-menu .wraaper-city-select .item-city .item-right span {
+    color: black;
+  }
+  .header-slide .select-city-menu .wraaper-city-select .item-city .item-right h2 {
+    color: #f1022e;
+  }
+
   .content-page .wrapper-tales {
     width: 90%;
   }
