@@ -1,57 +1,119 @@
 let selectBackgrundDesktop = `
 <div class="wraaper-city-select">
 
-<div class="item-city" id="item-Tokyo">
-    <div class="item-left">
-        <div class="container-img" id="select-Tokyo">
-            <!-- Image -->
-        </div>
-    </div>
-    <div class="item-right">
-        <span>GET INTO THE FUTURE IN</span>
-        <h2>Tokyo</h2>
-    </div>
-</div>
-
-<div class="item-city" id="item-Kyoto">
-    <div class="item-left">
-        <div class="container-img" id="select-Kyoto">
-            <!-- Image -->
-        </div>
-    </div>
-    <div class="item-right">
-        <span>TURN BACK THE TIME IN</span>
-        <h2>Kyoto</h2>
-    </div>
-</div>
-
-<div class="item-city" id="item-Osaka">
-    <div class="item-left">
-        <div class="container-img" id="select-Osaka">
-            <!-- Image -->
-        </div>
-    </div>
-    <div class="item-right">
-        <span>GET IMPRESSED BY</span>
-        <h2>Osaka</h2>
-    </div>
-</div>
-
-<div class="item-city" id="item-Nara">
-    <div class="item-left">
-        <div class="container-img" id="select-Nara">
-            <!-- Image -->
-        </div>
-    </div>
-    <div class="item-right">
-        <span>MAKE FRIENDS WITH NATURE IN</span>
-        <h2>Nara</h2>
-    </div>
-</div>>
-</div>
+                    <div class="item-city" id="item-Tokyo">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Tokyo">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET INTO THE FUTURE IN</span>
+                            <h2>Tokyo</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Kyoto">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Kyoto">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>TURN BACK THE TIME IN</span>
+                            <h2>Kyoto</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Osaka">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Osaka">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET IMPRESSED BY</span>
+                            <h2>Osaka</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Nara">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Nara">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>MAKE FRIENDS WITH NATURE IN</span>
+                            <h2>Nara</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    <
+                    </div> 
 `;
 
 let selectBackgrundTablet = `
+<div class="wraaper-city-select">
+
+                    <div class="item-city" id="item-Tokyo">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Tokyo">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET INTO THE FUTURE IN</span>
+                            <h2>Tokyo</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Kyoto">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Kyoto">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>TURN BACK THE TIME IN</span>
+                            <h2>Kyoto</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Osaka">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Osaka">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>GET IMPRESSED BY</span>
+                            <h2>Osaka</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    
+                    <div class="item-city" id="item-Nara">
+                        <div class="item-left">
+                            <div class="container-img" id="select-Nara">
+                                <!-- Image -->
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span>MAKE FRIENDS WITH NATURE IN</span>
+                            <h2>Nara</h2>
+                        </div>
+                        <div class="clickeable-div"></div>
+                    </div>
+                    <div class="tab">
+                        select city
+                    </div>
+                    </div> 
 `;
 
 const menuDesktop = `

@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
 
   
 .container-page{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -90,10 +90,9 @@ body::-webkit-scrollbar {
 .header-slide{
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background-image: url('../images/Yasukuni-Jinja.jpg');
     background-position:  bottom;
-    background-size: conver;
+    background-size: cover;
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(8,1fr);
@@ -138,11 +137,12 @@ body::-webkit-scrollbar {
                 padding: 0 1%;
                 li{
                     width: auto;
-                    padding: 0 15px;
-                    height: 45%;
+                    padding: 0.5rem 15px;
+                    height: 100%;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                    
                     a{
                         letter-spacing: 0px;
                         text-align: center;
@@ -186,92 +186,7 @@ body::-webkit-scrollbar {
                     right: 10%;
                 }
             }
-
-            //Menu estilos de tablet-movil
-            .hamburguer__container{
-                width: auto;
-                margin:0 10% 0 10%;
-                i{
-                    font-size: 2rem;
-                    color: white;
-                    &:hover{
-                        color: $red-color;
-                    }
-                }
-            }
-            .menu-absolute{
-                position: absolute;
-                width: 100vw;
-                height: 100vh;
-                top: 0%;
-                z-index: 9;
-                left: 0%;
-                display: flex;
-                justify-content: flex-start;
-                transform: translateX(-60rem);
-                transition: all 400ms;
-                background-color: transparent;
-                .wrapper-menu-absoluto{
-                    position: relative;
-                    display: flex;
-                    width: 50%;
-                    padding: 2rem 1rem;
-                    background-color: white;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    h2{
-                        width: 100%;
-                        a{
-                            font-size: 1.4rem;
-                            text-decoration: none;
-                            color: black;
-                            letter-spacing: 1px;
-                        }
-                    }
-                    ul{
-                        width: 100%;
-                        height: auto;
-                        list-style: none;
-                        li{
-                            width: 50%;
-                            padding: 10px 0;
-                            display: flex;
-                            justify-content: space-between;
-                            a{
-                                font-size: 1rem;
-                                text-decoration: none;
-                                color: black;
-                            }
-                            i{
-                                font-size: 1.2rem;
-                                color: red;
-                            }
-                        }
-                    }
-                    .social{
-                        width: 30%;
-                        justify-content: space-around;
-                        display: flex;
-                        align-items: flex-end;
-                        flex: 1;
-                        align-content: flex-end;
-                        color: black;
-                        span{
-                            font-size: 1.2rem;
-                        }
-                    }
-                    .close-menu{
-                        position: absolute;
-                        right: 10%;
-                    i{
-                        font-size: 2rem;
-                        color: red;
-                    } 
-                    }
-                }
-            }
+            
         }
         .wrapper-btn-explore{
             height: 100%;
@@ -417,19 +332,8 @@ body::-webkit-scrollbar {
                     position: absolute;
                     top: 0;
                     left: 0;
+                    cursor: pointer;
                 }
-            }
-            .tab{
-                color: black;
-                position: absolute;
-                transform: rotateZ(270deg);
-                background-color: white;
-                padding: 1rem 2rem;
-                left: -33%;
-                bottom: 10%;
-                border-radius: 10px 10px 0 0;
-                text-transform: uppercase;
-                font-weight: bold;
             }
 
             #item-Tokyo {
@@ -1072,7 +976,6 @@ body::-webkit-scrollbar {
 //1200-1400
 @media (max-width: 1400px) { 
     .footer{
-        background-color: yellow;
     }   
  }
 
@@ -1365,7 +1268,6 @@ body::-webkit-scrollbar {
     }
 
     .footer{
-        background-color: red;
         .list-to__go{
          
             .sub-menu{
@@ -1437,7 +1339,7 @@ body::-webkit-scrollbar {
     .header-slide{
        
         .menu{
-           padding: 0 0;
+           padding: 0 5%;
             .logo{
              
                 span{
@@ -1463,6 +1365,91 @@ body::-webkit-scrollbar {
                     }
                     span{
                        
+                    }
+                }
+                //Menu estilos de tablet-movil
+                .hamburguer__container{
+                    width: auto;
+                    margin:0 10% 0 10%;
+                    i{
+                        font-size: 2rem;
+                        color: white;
+                        &:hover{
+                            color: $red-color;
+                        }
+                    }
+                }
+                .menu-absolute{
+                    position: absolute;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0%;
+                    z-index: 9;
+                    left: 0%;
+                    display: flex;
+                    justify-content: flex-start;
+                    transform: translateX(-60rem);
+                    transition: all 400ms;
+                    background-color: transparent;
+                    .wrapper-menu-absoluto{
+                        position: relative;
+                        display: flex;
+                        width: 30rem;
+                        padding: 2rem 1rem;
+                        background-color: white;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        h2{
+                            width: 100%;
+                            a{
+                                font-size: 1.4rem;
+                                text-decoration: none;
+                                color: black;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        ul{
+                            width: 100%;
+                            height: auto;
+                            list-style: none;
+                            li{
+                                width: 50%;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                a{
+                                    font-size: 1rem;
+                                    text-decoration: none;
+                                    color: black;
+                                }
+                                i{
+                                    font-size: 1.2rem;
+                                    color: red;
+                                }
+                            }
+                        }
+                        .social{
+                            width: 30%;
+                            justify-content: space-around;
+                            display: flex;
+                            align-items: flex-end;
+                            flex: 1;
+                            align-content: flex-end;
+                            color: black;
+                            span{
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .close-menu{
+                            position: absolute;
+                            right: 10%;
+                        i{
+                            font-size: 2rem;
+                            color: red;
+                        } 
+                        }
                     }
                 }
             }
@@ -1530,6 +1517,18 @@ body::-webkit-scrollbar {
                         }
                     }
                 }
+                .tab{
+                    color: black;
+                    position: absolute;
+                    transform: rotateZ(270deg);
+                    background-color: white;
+                    padding: 1rem 2rem;
+                    left: -33%;
+                    bottom: 10%;
+                    border-radius: 10px 10px 0 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -1586,23 +1585,28 @@ body::-webkit-scrollbar {
                         .carousel__lista{
                             
                             .carousel__elemento{
-                             
+                                position: relative;
+                                margin: 0 1%;
                                 img{
-                                
+                                    height: 100%;                
+                                    object-fit: cover;
                                 }
                                 .carousel__text-image{
-                          
+                                    height: 70%;
+                                    bottom: -70%;
                                     span{
-                                    
+                                       
                                     }
                                     h2{
                                       
                                     }
                                     button{
-                             
+                                       
                                     }
                                 }
-                              
+                                &:hover .carousel__text-image{
+                               
+                                }
                             }
                         }
                         .carousel__anterior{
@@ -1792,7 +1796,817 @@ body::-webkit-scrollbar {
 
  //0-576
 @media (max-width: 576px) { 
+    .header-slide{
+       
+        .menu{
+           
+            .logo{
+             
+                span{
+                   
+                }
+            }
+            #nav-menu{
+            
+                ul{
+                  
+                    li{
+                   
+                        a{
+                           
+                        }
+                       
+                    }
+                }
+                label{
+                    
+                    input{
+                  
+                    }
+                    span{
+                       
+                    }
+                }
+                //Menu estilos de tablet-movil
+                .hamburguer__container{
+                    width: auto;
+                    margin:0 10% 0 10%;
+                    i{
+                        font-size: 2rem;
+                        color: white;
+                        &:hover{
+                            color: $red-color;
+                        }
+                    }
+                }
+                .menu-absolute{
+                    position: absolute;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0%;
+                    z-index: 9;
+                    left: 0%;
+                    display: flex;
+                    justify-content: flex-start;
+                    transform: translateX(-60rem);
+                    transition: all 400ms;
+                    background-color: white;
+                    .wrapper-menu-absoluto{
+                        position: relative;
+                        display: flex;
+                        width: 100vw;
+                        height: 90%;
+                        padding: 2rem 1rem;
+                        background-color: white;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        h2{
+                            width: 100%;
+                            a{
+                                font-size: 1.4rem;
+                                text-decoration: none;
+                                color: black;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        ul{
+                            width: 100%;
+                            height: auto;
+                            list-style: none;
+                            li{
+                                width: 35%;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                a{
+                                    font-size: 1rem;
+                                    text-decoration: none;
+                                    color: black;
+                                }
+                                i{
+                                    font-size: 1.2rem;
+                                    color: red;
+                                }
+                            }
+                        }
+                        .social{
+                            width: 30%;
+                            justify-content: space-around;
+                            display: flex;
+                            align-items: flex-end;
+                            flex: 1;
+                            align-content: flex-end;
+                            color: black;
+                            span{
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .close-menu{
+                            position: absolute;
+                            right: 10%;
+                        i{
+                            font-size: 2rem;
+                            color: red;
+                        } 
+                        }
+                    }
+                }
+            }
+            .wrapper-btn-explore{
+                .social-btns{
+                   display: none;
+                    span{
+                     
+                      
+                    }
+                    
+                }
+                button{
+                    
+                }
+            }
+        }
+        .logo-japan-center{
+           
+            p{
+                font-size: 2.5rem;
+            }
+            h1{
+                    font-size: 10rem;
+            }
+            &::after {
+                content: "";
+                background-color: rgba(181, 0, 45, 0.596);
+                position: absolute;
+                width: 20rem;
+                height: 20rem;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+        .select-city-menu{
+            height: 90vh;
+            .wraaper-city-select{
+          
+                .item-city{
+                    
+                    .item-left{
+                        .container-img{
+                          
+                        }
+                     
+                    }
+                    .item-right{
+                        span{
+                            
+                            
+                        }
+                        h2{
+                            
+                        }
+                    }
+                }
+                .tab{
+                
+                }
+            }
+        }
+    }
+ 
+    .content-page{
+ 
+        .wrapper-tales{
+             flex-wrap: wrap;
+             width: 80%;
+             position: relative;
+            .tales__img-wrapper{
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                margin-bottom: 3rem;
+                img{
+                    width: 100%;  
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+            .tales__text{
+                width: 100%;
+                h2{
+                 
+                }
+                p{
+            
+                }
+                ul{
+                    
+                    width: 80%;
+                    li{
+                        font-size: 1.2rem;
+                    }
+                }
+                button{
+     
+                    }
+                
+            }
+            #tales__info{
+                position: absolute;
+                right: -2rem;
+                top: 20%;
+                span{
+
+                }
+                #line-measure{
+
+                }
+            }
+        }
+    
+            .wrapper-content{
+ 
+                span{
+                  
+                }
+                > h2{
+              
+                }
+                p{
+                    
+                }
+                .carousel{
+                    
+                    
+                    .carousel__contenedor{
+                        
+                        .carousel__lista{
+                            
+                            .carousel__elemento{
+
+                                img{
   
+                                }
+                                .carousel__text-image{
+
+                                    width: 100%;
+                                    height: 90%;
+                                    bottom: -90%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    span{
+                                      
+                                    }
+                                    h2{
+                                   
+                                    }
+                                    button{
+                                     
+                                    }
+                                }
+                                &:hover .carousel__text-image{
+                                   
+                                }
+                            }
+                        }
+                        .carousel__anterior{
+                       
+                            i{
+                              
+                            }
+                        }
+                        .carousel__siguiente{
+                            i{
+    
+                            }
+                        }
+                    }
+                    .carousel__indicadores{
+                        
+                        .glider-dot{
+                          
+                        }
+                    }
+                }
+                .sub-wrapper-button{
+                    
+                    button{
+                   
+                    }
+                }
+            }
+        
+            .info-holoday{
+                grid-template-columns:  100%;
+                grid-template-rows:65% 35%;
+                
+                height: 850px;
+                position: relative;
+                margin-bottom: 25%;
+                .text-left-descriptive{
+                     
+                     grid-row: 1/2;
+                     grid-column: 1/2;
+                     height: 100%;
+                     overflow: hidden;
+                     align-items:center;
+                     align-content: normal;
+                     margin-bottom: 2rem;
+                    .part-txt-top{
+                        
+                        
+                        span{
+                 
+                        }
+                        h2{
+                         
+                        }
+                        p{
+    
+                        }
+                        button{
+                            
+                        }
+                    }
+                    .stick{
+                        position: absolute;
+                        bottom: -10%;
+                    }
+                    .image-resourt{
+                        height: auto;
+                        margin-top: 10%;
+                        margin-top: 1%;
+                        img{
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .prev-video-image{
+                     height: 100%;
+                    .right-top{
+                     
+                        button{
+                   
+                            i{
+                               
+                            }
+                        }
+                    }
+                    .right-bottom{
+                       
+                        a{
+                            
+                            i{
+                                
+                            }
+                      
+                        }
+                    }
+                }
+            }
+        
+            .wrapper-to-blog{
+                grid-template-columns:100%;
+                grid-template-rows: 5% repeat(5,1fr);
+                width: 80%;
+                height: auto;
+                margin-bottom: 4rem;
+                gap: 1rem 0;
+                .title-to-blog{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                .item-theme-blog{
+                    justify-content: normal;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    .to-blog__img{
+                        height: 70%;
+                        img{
+                         
+                        }
+                    }
+                    h4{
+                        font-size: 1.4em;
+                    }
+                    span{
+                        font-size: 1.2rem;
+                    }
+                    button{
+                    
+                    }
+                }
+                #post-1{
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                #post-2{
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                    
+                }
+                #post-3{
+                    grid-column: 1/2;
+                    grid-row: 4/5;
+
+                }
+                #post-4{
+                    grid-column: 1/2;
+                    grid-row: 5/6;
+
+                }
+                #post-5{
+                    grid-column: 1/2;
+                    grid-row: 6/7;
+                    .to-blog__img{
+                        img{
+                            
+                        }
+                    }
+                    h4{
+                        
+                    }
+                    span{
+                       
+                    }
+                }
+        
+            }
+    }
+ 
+    .footer{
+        background-color: black;
+        .list-to__go{
+             width: 95%;
+             margin: 0 auto;
+             flex-wrap: wrap;
+             margin: 10px 0;
+            .sub-menu{
+                width: 100%;
+                margin-bottom: 2rem;
+                h5{
+                    width: 100%;
+                }
+                ul{
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        a{
+                            width: 100%;
+                            span{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        hr{
+            width: 100%;
+        }
+        .mark-social-media{
+           flex-direction: column;
+           >*{
+               margin-bottom: 30px;
+           }
+            .footer-logo{
+                margin-top: 20px;
+
+                span{
+                    
+                }
+            }
+            ol{
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 150px;
+                li{
+                    
+                    a{
+                         
+                    }
+                }
+            }
+            ul{
+                width: 100%;
+                justify-content: space-around;
+                li{
+                    
+                    a{  
+                        
+                        span{
+                            
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+
+@media (max-width: 425px) { 
+    *{
+        font-size: 12px;
+    }
+    .header-slide{
+       
+        .logo-japan-center{
+            p{
+                font-size: 2rem;
+                //transform: rotateZ(90deg); nueva idea
+            }
+            h1{
+                    font-size: 7.5rem;
+            }
+            &::after {
+                content: "";
+                background-color: rgba(181, 0, 45, 0.596);
+                position: absolute;
+                width: 20rem;
+                height: 20rem;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+ 
+    .content-page{
+ 
+        .wrapper-tales{
+             flex-wrap: wrap;
+             width: 80%;
+             position: relative;
+            .tales__img-wrapper{
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                margin-bottom: 3rem;
+                img{
+                    width: 100%;  
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+            .tales__text{
+                width: 100%;
+                h2{
+                 
+                }
+                p{
+            
+                }
+                ul{
+                    
+                    width: 100%;
+                    li{
+                        font-size: 1.2rem;
+                    }
+                }
+                button{
+                    align-self: center;    
+                }
+                
+            }
+            #tales__info{
+                position: absolute;
+                right: -1.5rem;
+                top: 0%;
+                span{
+
+                }
+                #line-measure{
+
+                }
+            }
+        }
+    
+            .wrapper-content{
+                width: 100%;
+                span{
+                  
+                }
+                > h2{
+              
+                }
+                p{
+                    
+                }
+                .carousel{
+                    
+                    
+                    .carousel__contenedor{
+                        
+                        .carousel__lista{
+                            
+                            .carousel__elemento{
+
+                                img{
+  
+                                }
+                                .carousel__text-image{
+
+                                    width: 100%;
+                                    height: 90%;
+                                    bottom: -90%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    span{
+                                      
+                                    }
+                                    h2{
+                                   
+                                    }
+                                    button{
+                                     
+                                    }
+                                }
+                                &:hover .carousel__text-image{
+                                   
+                                }
+                            }
+                        }
+                        .carousel__anterior{
+                            top: 118%;
+                            left: 5px;
+                            i{
+                              
+                            }
+                        }
+                        .carousel__siguiente{
+                            top: 118%;
+                            right: 5px;
+                            i{
+    
+                            }
+                        }
+                    }
+                    .carousel__indicadores{
+                        
+                        .glider-dot{
+                          
+                        }
+                    }
+                }
+                .sub-wrapper-button{
+                    
+                    button{
+                   
+                    }
+                }
+            }
+        
+            .info-holoday{
+                grid-template-columns:  100%;
+                grid-template-rows:65% 35%;
+                
+                height: 850px;
+                position: relative;
+                margin-bottom: 25%;
+                .text-left-descriptive{
+                     
+                     grid-row: 1/2;
+                     grid-column: 1/2;
+                     height: 100%;
+                     overflow: hidden;
+                     align-items:center;
+                     align-content: normal;
+                     margin-bottom: 2rem;
+                    .part-txt-top{
+                        
+                        
+                        span{
+                 
+                        }
+                        h2{
+                         
+                        }
+                        p{
+    
+                        }
+                        button{
+                            
+                        }
+                    }
+                    .stick{
+                        position: absolute;
+                        bottom: -10%;
+                    }
+                    .image-resourt{
+                        height: auto;
+                        margin-top: 10%;
+                        margin-top: 1%;
+                        img{
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .prev-video-image{
+                     height: 100%;
+                    .right-top{
+                     
+                        button{
+                   
+                            i{
+                               
+                            }
+                        }
+                    }
+                    .right-bottom{
+                       
+                        a{
+                            
+                            i{
+                                
+                            }
+                      
+                        }
+                    }
+                }
+            }
+        
+            .wrapper-to-blog{
+                grid-template-columns:100%;
+                grid-template-rows: 5% repeat(5,1fr);
+                width: 80%;
+                height: auto;
+                margin-bottom: 4rem;
+                gap: 1rem 0;
+                .title-to-blog{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                .item-theme-blog{
+                    justify-content: normal;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    .to-blog__img{
+                        height: 70%;
+                        img{
+                         
+                        }
+                    }
+                    h4{
+                        font-size: 1.4em;
+                    }
+                    span{
+                        font-size: 1.2rem;
+                    }
+                    button{
+                    
+                    }
+                }
+                #post-1{
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                #post-2{
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                    
+                }
+                #post-3{
+                    grid-column: 1/2;
+                    grid-row: 4/5;
+
+                }
+                #post-4{
+                    grid-column: 1/2;
+                    grid-row: 5/6;
+
+                }
+                #post-5{
+                    grid-column: 1/2;
+                    grid-row: 6/7;
+                    .to-blog__img{
+                        img{
+                            
+                        }
+                    }
+                    h4{
+                        
+                    }
+                    span{
+                       
+                    }
+                }
+        
+            }
+    }
+ 
 }
 
 

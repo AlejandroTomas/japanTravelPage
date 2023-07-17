@@ -2,15 +2,25 @@ import lazyLoading from "./lazyLoad.js";
 import renderScreen from "./renderMediaQuery.js";
 
 
-window.addEventListener('load',() =>{
-    //Evento rezsize momentaneo
-    window.addEventListener('resize',()=>{
-        console.log(screen.width)
-        renderScreen(screen.width,document.getElementById('nav-menu'),'menu');
-        //renderScreen(screen.width,document.querySelector('.select-city-menu'),'selectBackgrund');
-    })
+var imagenPrecargada1 = new Image();
+var imagenPrecargada2 = new Image();
+var imagenPrecargada3 = new Image();
+var imagenPrecargada4 = new Image();
+var imagenPrecargada5 = new Image();
+
+imagenPrecargada1.src = "./images/Tokyo-Portada.jpeg";	//La imagen se descarga y se guarda en la caché.
+imagenPrecargada2.src = "./images/Kyoto-Portada.jpg";	//La imagen se descarga y se guarda en la caché.
+imagenPrecargada3.src = "./images/santuario_9c627294_1600x1873.jpg";	//La imagen se descarga y se guarda en la caché.
+imagenPrecargada4.src = "./images/Nara.png";	//La imagen se descarga y se guarda en la caché.
+
+window.addEventListener('load', () =>{
+    
+
+
+    //Elige los menu dependiendo del tamaño de pantalla
     renderScreen(screen.width,document.getElementById('nav-menu'),'menu');
-    //renderScreen(screen.width,document.querySelector('.select-city-menu'),'selectBackgrund');
+    renderScreen(screen.width,document.querySelector('.select-city-menu'),'selectBackgrund');
+
     //Carga lenta de las imagenes
     lazyLoading(document.querySelectorAll('.img'))
 
@@ -45,7 +55,26 @@ window.addEventListener('load',() =>{
         arrows: {
           prev: '.carousel__anterior',
           next: '.carousel__siguiente'
-        }
+        },
+        responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 0,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 'auto',
+                slidesToScroll: 'auto',
+                itemWidth: 150,
+                duration: 0.25
+              }
+            },{
+              // screens greater than >= 1024px
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+              }
+            }
+          ]
     });
 
 
@@ -86,28 +115,28 @@ window.addEventListener('load',() =>{
         if(e.target===backgroundSelect[0]){
            changeBackground(0);
            console.log('click')
-           closeMenuSelect(document.querySelector('.select-city-menu'))
+           if(screen.width<=768)closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //kyoto
         if(e.target===backgroundSelect[1]){
             changeBackground(1);
             console.log('click')
-            closeMenuSelect(document.querySelector('.select-city-menu'))
+            if(screen.width<=768)closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //Osaka
         if(e.target===backgroundSelect[2]){
             changeBackground(2);
             console.log('click')
-            closeMenuSelect(document.querySelector('.select-city-menu'))
+            if(screen.width<=768)closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //Nara
         if(e.target===backgroundSelect[3]){
             changeBackground(3);
             console.log('click')
-            closeMenuSelect(document.querySelector('.select-city-menu'))
+            if(screen.width<=768)closeMenuSelect(document.querySelector('.select-city-menu'))
         }
 
         //*************Animacio de ABOUT_TALES*************//
@@ -132,7 +161,7 @@ window.addEventListener('load',() =>{
         if(e.target.matches('.tab')){
             document.querySelector('.select-city-menu').style.transform="translateX(0%)"
         }
-        console.log(e.target)
+        /* console.log(e.target) */
     });
 
 })
